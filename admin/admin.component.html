@@ -1,0 +1,24 @@
+<div class="container mt-10 mb-10">
+    <div class="row">
+      <h1 class="big-header text-wb mt-8 mb-8">Besökare</h1>
+    </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12 mb-2">
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-info text-white"><i class="fas fa-search"></i></span>
+        </div>
+        <input type="text" class="form-control" placeholder="Namn" aria-label="Large" [(ngModel)]="searchTerm"
+          aria-describedby="inputGroup-sizing-sm">
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div class="list-group">
+        <span (click)="onClick(user.uid)" *ngFor="let user of filteredUsers" class="list-group-item list-group-item-action flex-column align-items-start pointer">
+          <app-display-user [user]="user"></app-display-user>
+        </span>
+      </div>
+      <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+    </div>
+  </div>
+</div>
