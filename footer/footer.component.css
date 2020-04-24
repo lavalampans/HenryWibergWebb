@@ -1,0 +1,15 @@
+.display-footer {
+    font-weight: 700;
+    font-size: 2.00rem;
+    color:#fff;
+}
+
+.display-footer-second {
+    font-weight: 300;
+    font-size: 1.25rem;
+    color:#fff;
+}
+
+footer {
+    background-color:#3a444c;
+}

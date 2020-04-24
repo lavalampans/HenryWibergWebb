@@ -1,0 +1,41 @@
+<div class="container mt-10 mb-10">
+    <div class="row">
+      <h1 class="big-header text-wb mt-8 mb-8">Produkter</h1>
+    </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <img class="card-img-top responsive w-50" src="/assets/images/formular.png" alt="Card image cap">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2 text-center mt-4">
+      <div class="mb-4" *ngIf="auth.user | async; then authenticated else guest"></div>
+    </div>
+  </div>
+  <ng-template #guest>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3 class="display-second mb-4">Logga in via din Gmail så kan du ladda ner vår produktlista utan <b>kostnad</b>!</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12 text-center mt-2">
+        <button class="google-button-icon w-100" (click)="auth.googleLogin()"><i class="fab fa-google"></i> <span class="google_text">Gmail</span></button>
+      </div>
+      <div class="col-md-6 col-sm-12 text-center mt-2">
+        <button class="google-button-icon w-100" (click)="auth.googleLogin()"><i class="fab fa-facebook"></i> <span
+            class="google_text">Facebook</span></button>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #authenticated>
+    <div *ngIf="auth.user | async as user">
+      <h3 class="display-primary mt-4">Välkommen {{user.displayName}}!</h3>
+      <h3 class="display-second mt-4">Klicka på ladda ner för att ta hem vår produktlista.</h3>
+      <div class="row mt-4"><button class="btn btn-lg btn-success m-auto" (click)="auth.logout()"> <i class="fas fa-file-download"></i>
+          Ladda ner</button></div>
+      <div class="row mt-4"><button class="btn btn-lg btn-danger m-auto" (click)="auth.logout()"><i class="fas fa-sign-out-alt"></i>
+          Logga ut</button></div>
+    </div>
+  </ng-template>
+</div>

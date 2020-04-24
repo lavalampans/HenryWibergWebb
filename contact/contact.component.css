@@ -1,0 +1,21 @@
+td {
+    border:none !important;
+}
+
+.table tr:hover {
+    background-color:#4e586d;
+}
+
+.table tr:hover .display-second, a:link{
+    color:#fff !important;
+}
+
+a:hover {
+    color:#fff !important;
+}
+
+a:link {
+    color:#333 !important;
+    display: block;
+    text-decoration: none !important;
+}

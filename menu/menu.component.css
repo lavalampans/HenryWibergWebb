@@ -1,0 +1,44 @@
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    color:#fff;
+    margin-right:50px;
+}
+
+.menu-header {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+svg.logo .leaf {
+    fill: #a48561;
+}
+
+svg.logo .text {
+    fill: #fff;
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.logo {
+    display:block;
+}
+
+svg.logo {
+    width: 120px;
+}
+
+.sh-b{
+    box-shadow: 0 2px 1px -1px rgba(109, 106, 106, 0.5);
+} 
+
+@media (min-width: 576px) {
+.navbar .navbar-collapse {
+    padding-top: 35px;
+}
+}
